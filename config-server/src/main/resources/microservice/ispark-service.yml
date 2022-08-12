@@ -1,3 +1,11 @@
+server:
+  port: 1379
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1380/eureka/
+
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL}
