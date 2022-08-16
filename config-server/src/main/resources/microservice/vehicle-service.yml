@@ -1,0 +1,28 @@
+server:
+  port: 1381
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1380/eureka/
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: com.mysql.jdbc.Driver
+
+  rabbitmq:
+    username: ${RABBITMQ_DEFAULT_USER}
+    password: ${RABBITMQ_DEFAULT_PASS}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+rabbit:
+  queue: msQueue
+  exchange: msExchange
+  routingKey: msRoutingKey

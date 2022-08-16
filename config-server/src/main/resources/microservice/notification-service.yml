@@ -1,0 +1,24 @@
+server:
+  port: 1382
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1380/eureka/
+spring:
+  rabbitmq:
+    username: ${RABBITMQ_DEFAULT_USER}
+    password: ${RABBITMQ_DEFAULT_PASS}
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASS}
+    properties:
+      mail:
+        debug: true
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          timeout: 5000

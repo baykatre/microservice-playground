@@ -1,4 +1,4 @@
-package co.anilozturk.isparkservice.park.model;
+package co.anilozturk.feignclient.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class ParkLocationDto {
 
     private Integer freeCapacity;
 
-    private ParkType parkType;
+    private String parkType;
 
     private String district;
 

@@ -8,7 +8,7 @@ public enum ParkType {
 
     ON_ROAD("YOL ÜSTÜ"), OPEN("AÇIK OTOPARK"), CLOSE("KAPALI OTOPARK");
 
-    private String name;
+    private final String name;
 
     ParkType(String name) {
         this.name = name;

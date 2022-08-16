@@ -1,6 +1,6 @@
 package co.anilozturk.isparkservice.park;
 
-import co.anilozturk.isparkservice.park.model.ParkLocationDto;
+import co.anilozturk.feignclient.dto.ParkLocationDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

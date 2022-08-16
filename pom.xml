@@ -22,6 +22,8 @@
 
 	<modules>
 		<module>service-parent</module>
-	</modules>
+        <module>feign-client</module>
+        <module>notification-service</module>
+    </modules>
 
 </project>

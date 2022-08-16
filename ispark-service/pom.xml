@@ -6,9 +6,8 @@
         <groupId>co.anilozturk</groupId>
         <artifactId>service-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../service-parent/pom.xml</relativePath>
+        <relativePath/>
     </parent>
-    <groupId>co.anilozturk</groupId>
     <artifactId>ispark-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ispark-service</name>
@@ -33,6 +32,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>co.anilozturk</groupId>
+            <artifactId>feign-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

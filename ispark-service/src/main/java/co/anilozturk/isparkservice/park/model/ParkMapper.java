@@ -1,5 +1,7 @@
 package co.anilozturk.isparkservice.park.model;
 
+import co.anilozturk.feignclient.dto.ParkLocationDetailDto;
+import co.anilozturk.feignclient.dto.ParkLocationDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -17,11 +19,10 @@ public interface ParkMapper {
 
     ParkLocationDto convertToParkLocationDto(ParkLocation parkLocation);
 
-    @Mapping(source = "parkType", target = "parkType", qualifiedByName = "mapToParkType")
     ParkLocationDetailDto convertToParkLocationDetailDto(ParkLocationDetailResponse parkLocationDetailResponse);
-
+    @Mapping(source = "parkType", target = "parkType", qualifiedByName = "mapToParkType")
     ParkLocationDetail convertToParkDetailLocation(ParkLocationDetailDto parkLocationDetailDto);
-
+    @Mapping(source = "parkType.name", target = "parkType")
     ParkLocationDetailDto convertToParkLocationDetailDto(ParkLocationDetail parkLocationDetail);
 
     @Named("mapToParkType")

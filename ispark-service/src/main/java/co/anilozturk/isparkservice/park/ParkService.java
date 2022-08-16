@@ -1,11 +1,12 @@
 package co.anilozturk.isparkservice.park;
 
+import co.anilozturk.feignclient.dto.ParkLocationDetailDto;
+import co.anilozturk.feignclient.dto.ParkLocationDto;
 import co.anilozturk.isparkservice.park.model.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,13 +32,11 @@ public class ParkService {
 
         final List<ParkLocation> parkLocation = parkLocationRepository.findAll();
 
-        final List<ParkLocationDto> parkLocationDtoList = CollectionUtils.isEmpty(parkLocation)
+        return CollectionUtils.isEmpty(parkLocation)
                 ? getParkLocationDtoList()
                 : parkLocation.stream()
                             .map(ParkMapper.INSTANCE::convertToParkLocationDto)
                             .collect(Collectors.toList());
-
-        return parkLocationDtoList;
 
     }
 
@@ -78,7 +77,7 @@ public class ParkService {
 
         final List<ParkLocationDto> parkLocationDtoList = parkLocationDtoFlux
                 .toStream()
-                .map(parkLocationResponse -> ParkMapper.INSTANCE.convertToParkLocationDto(parkLocationResponse))
+                .map(ParkMapper.INSTANCE::convertToParkLocationDto)
                 .collect(Collectors.toList());
 
         parkLocationRepository.saveAll(parkLocationDtoList

@@ -17,6 +17,7 @@
         <module>../config-server</module>
         <module>../eureka-server</module>
         <module>../ispark-service</module>
+        <module>../vehicle-service</module>
     </modules>
 
     <properties>
