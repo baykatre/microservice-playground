@@ -22,6 +22,9 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
+  zipkin:
+    base-url: http://localhost:9411/
+
 rabbit:
   queue: msQueue
   exchange: msExchange

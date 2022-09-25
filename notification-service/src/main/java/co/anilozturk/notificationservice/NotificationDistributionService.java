@@ -3,7 +3,6 @@ package co.anilozturk.notificationservice;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,8 +19,8 @@ public class NotificationDistributionService {
         System.out.println("Message read from myQueue : " + in);
 
         final SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setFrom("source@anilozturk.co");
-        mailMessage.setTo("destination@anilozturk.co");
+        mailMessage.setFrom("notification@anilozturk.co");
+        mailMessage.setTo("info@anilozturk.co");
         mailMessage.setSubject("Rabbit Notification");
         mailMessage.setText(in);
 

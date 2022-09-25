@@ -11,3 +11,7 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:1380/eureka/
+
+spring:
+  zipkin:
+    base-url: http://localhost:9411/

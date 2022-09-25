@@ -23,7 +23,6 @@
 	<modules>
 		<module>service-parent</module>
         <module>feign-client</module>
-        <module>notification-service</module>
     </modules>
 
 </project>
