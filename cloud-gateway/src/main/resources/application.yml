@@ -1,0 +1,11 @@
+server:
+  port: 8088
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1380/eureka/
+
+spring:
+  application:
+    name: cloud-gateway

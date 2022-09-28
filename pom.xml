@@ -23,6 +23,7 @@
 	<modules>
 		<module>service-parent</module>
         <module>feign-client</module>
+        <module>cloud-gateway</module>
     </modules>
 
 </project>
