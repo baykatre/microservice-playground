@@ -21,5 +21,17 @@ spring:
   zipkin:
     base-url: http://localhost:9411/
 
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+
 ispark:
   url: https://api.ibb.gov.tr/ispark
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
