@@ -24,6 +24,7 @@
 		<module>service-parent</module>
         <module>feign-client</module>
         <module>cloud-gateway</module>
+		<module>hystrix-gateway</module>
     </modules>
 
 </project>

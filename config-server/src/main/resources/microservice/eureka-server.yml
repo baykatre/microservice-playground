@@ -1,5 +1,5 @@
 server:
-  port: 1380
+  port: ${SERVER_PORT:1111}
 
 eureka:
   server:
@@ -10,16 +10,16 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:1380/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:1380}/eureka/
 
 spring:
   zipkin:
-    base-url: http://localhost:9411/
+    base-url: ${ZIPKIN_URL:http://localhost:9411}/
 
   boot:
     admin:
       client:
-        url: http://localhost:8080
+        url: ${ADMIN_SERVER_URL:http://localhost:8080}
 
 management:
   endpoints:

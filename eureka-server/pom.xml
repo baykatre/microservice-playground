@@ -6,7 +6,7 @@
         <groupId>co.anilozturk</groupId>
         <artifactId>service-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../service-parent/pom.xml</relativePath>
     </parent>
     <artifactId>eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>

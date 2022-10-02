@@ -1,10 +1,10 @@
 server:
-  port: 1379
+  port: ${SERVER_PORT:8081}
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1380/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:1380}/eureka/
 
 spring:
   datasource:
@@ -19,16 +19,16 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   zipkin:
-    base-url: http://localhost:9411/
+    base-url: ${ZIPKIN_URL:http://localhost:9411}/
 
 
   boot:
     admin:
       client:
-        url: http://localhost:8080
+        url: ${ADMIN_SERVER_URL:http://localhost:8080}
 
 ispark:
-  url: https://api.ibb.gov.tr/ispark
+  url: 'https://api.ibb.gov.tr/ispark'
 
 management:
   endpoints:
