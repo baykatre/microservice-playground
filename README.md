@@ -1,6 +1,6 @@
 # Microservice Playground
 
-Is a Spring Boot microservice app to getting real Ispark (Istanbul Metropolian Municipality official parking service) locations and park a vehicle to there.
+Is a Spring Boot microservice app to getting real Ispark (Istanbul Metropolitan Municipality official parking service) locations and park a vehicle to there.
 
 ### Prerequisites
 
