@@ -125,7 +125,7 @@ services:
     ports:
       - '8082:8082'
     healthcheck:
-      test: [ "CMD-SHELL", "curl --location --request POST 'localhost:8082/parking?plate=01 V 3829&placeId=2866' && echo 'OK'" ]
+      test: [ "CMD-SHELL", "curl -f http://localhost:8082/actuator && echo 'OK'" ]
       interval: 5s
       timeout: 2s
       retries: 3
