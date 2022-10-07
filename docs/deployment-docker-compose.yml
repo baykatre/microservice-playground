@@ -126,9 +126,9 @@ services:
       - '8082:8082'
     healthcheck:
       test: [ "CMD-SHELL", "curl -f http://localhost:8082/actuator && echo 'OK'" ]
-      interval: 5s
-      timeout: 2s
-      retries: 3
+      interval: 10s
+      timeout: 5s
+      retries: 5
     depends_on:
       mysql:
         condition: service_healthy
