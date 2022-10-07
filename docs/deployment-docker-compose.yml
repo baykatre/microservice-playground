@@ -78,7 +78,7 @@ services:
   # Services -----------------------
 
   ispark-service:
-    image: ispark-service:0.0.1-SNAPSHOT
+    image: baykatre/ispark-service:0.0.1-SNAPSHOT
     container_name: ispark-service
     networks:
       - microservices
@@ -105,7 +105,7 @@ services:
         condition: service_healthy
 
   vehicle-service:
-    image: vehicle-service:0.0.1-SNAPSHOT
+    image: baykatre/vehicle-service:0.0.1-SNAPSHOT
     container_name: vehicle-service
     networks:
       - microservices
@@ -140,7 +140,7 @@ services:
         condition: service_healthy
 
   notification-service:
-    image: notification-service:0.0.1-SNAPSHOT
+    image: baykatre/notification-service:0.0.1-SNAPSHOT
     container_name: notification-service
     networks:
       - microservices
@@ -173,7 +173,7 @@ services:
 
   # Management -----------------------
   config-server:
-    image: config-server:0.0.1-SNAPSHOT
+    image: baykatre/config-server:0.0.1-SNAPSHOT
     container_name: config-server
     restart: always
     networks:
@@ -193,7 +193,7 @@ services:
       retries: 3
 
   eureka-server:
-    image: eureka-server:0.0.1-SNAPSHOT
+    image: baykatre/eureka-server:0.0.1-SNAPSHOT
     container_name: eureka-server
     restart: always
     networks:
@@ -214,7 +214,7 @@ services:
         condition: service_healthy
 
   admin-server:
-    image: admin-server:0.0.1-SNAPSHOT
+    image: baykatre/admin-server:0.0.1-SNAPSHOT
     container_name: admin-server
     restart: always
     networks:
@@ -232,7 +232,7 @@ services:
         condition: service_healthy
 
   cloud-gateway:
-    image: cloud-gateway:0.0.1-SNAPSHOT
+    image: baykatre/cloud-gateway:0.0.1-SNAPSHOT
     container_name: cloud-gateway
     networks:
       - microservices

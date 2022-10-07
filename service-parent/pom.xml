@@ -160,7 +160,7 @@
                     <verbose>true</verbose>
                     <images>
                         <image>
-                            <name>${project.artifactId}:${project.version}</name>
+                            <name>baykatre/${project.artifactId}:${project.version}</name>
                             <build>
                                 <from>adoptopenjdk/openjdk11</from>
                                 <entryPoint>
