@@ -1,4 +1,0 @@
-hystrix:
-  dashboard:
-    proxy-stream-allow-list:
-      - 'localhost'
